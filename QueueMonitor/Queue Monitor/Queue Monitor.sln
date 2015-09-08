@@ -1,0 +1,113 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Queue Monitor", "Queue Monitor\Queue Monitor.csproj", "{8B28D028-2CA5-4180-959B-65E3DCEE1DB1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6D642D36-BD79-4716-AA96-CC07AE810CBF}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\Downloads\ARAPI80.NET\arapi80_build001.dll = ..\..\..\..\Downloads\ARAPI80.NET\arapi80_build001.dll
+		..\..\..\..\Downloads\ARAPI80.NET\arapi80d_build001.dll = ..\..\..\..\Downloads\ARAPI80.NET\arapi80d_build001.dll
+		..\..\..\..\Downloads\ARAPI80.NET\arcatalog_de.dll = ..\..\..\..\Downloads\ARAPI80.NET\arcatalog_de.dll
+		..\..\..\..\Downloads\ARAPI80.NET\arcatalog_eng.dll = ..\..\..\..\Downloads\ARAPI80.NET\arcatalog_eng.dll
+		..\..\..\..\Downloads\ARAPI80.NET\arcatalog_es.dll = ..\..\..\..\Downloads\ARAPI80.NET\arcatalog_es.dll
+		..\..\..\..\Downloads\ARAPI80.NET\arcatalog_fr.dll = ..\..\..\..\Downloads\ARAPI80.NET\arcatalog_fr.dll
+		..\..\..\..\Downloads\ARAPI80.NET\arcatalog_it.dll = ..\..\..\..\Downloads\ARAPI80.NET\arcatalog_it.dll
+		..\..\..\..\Downloads\ARAPI80.NET\arcatalog_jpn.dll = ..\..\..\..\Downloads\ARAPI80.NET\arcatalog_jpn.dll
+		..\..\..\..\Downloads\ARAPI80.NET\arcatalog_ko.dll = ..\..\..\..\Downloads\ARAPI80.NET\arcatalog_ko.dll
+		..\..\..\..\Downloads\ARAPI80.NET\arcatalog_pt.dll = ..\..\..\..\Downloads\ARAPI80.NET\arcatalog_pt.dll
+		..\..\..\..\Downloads\ARAPI80.NET\arcatalog_rus.dll = ..\..\..\..\Downloads\ARAPI80.NET\arcatalog_rus.dll
+		..\..\..\..\Downloads\ARAPI80.NET\arcatalog_zh.dll = ..\..\..\..\Downloads\ARAPI80.NET\arcatalog_zh.dll
+		..\..\..\..\Downloads\ARAPI80.NET\arcni80_build001.dll = ..\..\..\..\Downloads\ARAPI80.NET\arcni80_build001.dll
+		..\..\..\..\Downloads\ARAPI80.NET\ariapi80_build001.dll = ..\..\..\..\Downloads\ARAPI80.NET\ariapi80_build001.dll
+		..\..\..\..\Downloads\ARAPI80.NET\ariapi80d_build001.dll = ..\..\..\..\Downloads\ARAPI80.NET\ariapi80d_build001.dll
+		..\..\..\..\Downloads\ARAPI80.NET\arjni80_build001.dll = ..\..\..\..\Downloads\ARAPI80.NET\arjni80_build001.dll
+		..\..\..\..\Downloads\ARAPI80.NET\arjni80d_build001.dll = ..\..\..\..\Downloads\ARAPI80.NET\arjni80d_build001.dll
+		..\..\..\..\Downloads\ARAPI80.NET\arodbc80_build001.dll = ..\..\..\..\Downloads\ARAPI80.NET\arodbc80_build001.dll
+		..\..\..\..\Downloads\ARAPI80.NET\arodbc80d_build001.dll = ..\..\..\..\Downloads\ARAPI80.NET\arodbc80d_build001.dll
+		..\..\..\..\Downloads\ARAPI80.NET\arrpc75.dll = ..\..\..\..\Downloads\ARAPI80.NET\arrpc75.dll
+		..\..\..\..\Downloads\ARAPI80.NET\arrpc80_build001.dll = ..\..\..\..\Downloads\ARAPI80.NET\arrpc80_build001.dll
+		..\..\..\..\Downloads\ARAPI80.NET\arrpc80d_build001.dll = ..\..\..\..\Downloads\ARAPI80.NET\arrpc80d_build001.dll
+		..\..\..\..\Downloads\ARAPI80.NET\arutiljni80_build001.dll = ..\..\..\..\Downloads\ARAPI80.NET\arutiljni80_build001.dll
+		..\..\..\..\Downloads\ARAPI80.NET\arutiljni80d_build001.dll = ..\..\..\..\Downloads\ARAPI80.NET\arutiljni80d_build001.dll
+		..\..\..\..\Downloads\ARAPI80.NET\arutl75.dll = ..\..\..\..\Downloads\ARAPI80.NET\arutl75.dll
+		..\..\..\..\Downloads\ARAPI80.NET\arutl80_build001.dll = ..\..\..\..\Downloads\ARAPI80.NET\arutl80_build001.dll
+		..\..\..\..\Downloads\ARAPI80.NET\arutl80d_build001.dll = ..\..\..\..\Downloads\ARAPI80.NET\arutl80d_build001.dll
+		..\..\..\..\Downloads\ARAPI80.NET\arxmlutil80_build001.dll = ..\..\..\..\Downloads\ARAPI80.NET\arxmlutil80_build001.dll
+		..\..\..\..\Downloads\ARAPI80.NET\arxmlutil80d_build001.dll = ..\..\..\..\Downloads\ARAPI80.NET\arxmlutil80d_build001.dll
+		..\..\..\..\Downloads\ARAPI80.NET\BMC.arnettoc.dll = ..\..\..\..\Downloads\ARAPI80.NET\BMC.arnettoc.dll
+		..\..\..\..\Downloads\ARAPI80.NET\BMC.ARSystem.dll = ..\..\..\..\Downloads\ARAPI80.NET\BMC.ARSystem.dll
+		..\..\..\..\Downloads\ARAPI80.NET\BMC.ARSystem.Utilities.Common.dll = ..\..\..\..\Downloads\ARAPI80.NET\BMC.ARSystem.Utilities.Common.dll
+		..\..\..\..\Downloads\ARAPI80.NET\BMC.Atrium.dll = ..\..\..\..\Downloads\ARAPI80.NET\BMC.Atrium.dll
+		..\..\..\..\Downloads\ARAPI80.NET\cmdbapi75.dll = ..\..\..\..\Downloads\ARAPI80.NET\cmdbapi75.dll
+		..\..\..\..\Downloads\ARAPI80.NET\icudt32.dll = ..\..\..\..\Downloads\ARAPI80.NET\icudt32.dll
+		..\..\..\..\Downloads\ARAPI80.NET\icudtbmc32.dll = ..\..\..\..\Downloads\ARAPI80.NET\icudtbmc32.dll
+		..\..\..\..\Downloads\ARAPI80.NET\icudtbmc32d.dll = ..\..\..\..\Downloads\ARAPI80.NET\icudtbmc32d.dll
+		..\..\..\..\Downloads\ARAPI80.NET\icuin32.dll = ..\..\..\..\Downloads\ARAPI80.NET\icuin32.dll
+		..\..\..\..\Downloads\ARAPI80.NET\icuin32d.dll = ..\..\..\..\Downloads\ARAPI80.NET\icuin32d.dll
+		..\..\..\..\Downloads\ARAPI80.NET\icuinbmc32.dll = ..\..\..\..\Downloads\ARAPI80.NET\icuinbmc32.dll
+		..\..\..\..\Downloads\ARAPI80.NET\icuinbmc32d.dll = ..\..\..\..\Downloads\ARAPI80.NET\icuinbmc32d.dll
+		..\..\..\..\Downloads\ARAPI80.NET\icuio32.dll = ..\..\..\..\Downloads\ARAPI80.NET\icuio32.dll
+		..\..\..\..\Downloads\ARAPI80.NET\icuio32d.dll = ..\..\..\..\Downloads\ARAPI80.NET\icuio32d.dll
+		..\..\..\..\Downloads\ARAPI80.NET\icuiobmc32.dll = ..\..\..\..\Downloads\ARAPI80.NET\icuiobmc32.dll
+		..\..\..\..\Downloads\ARAPI80.NET\icuiobmc32d.dll = ..\..\..\..\Downloads\ARAPI80.NET\icuiobmc32d.dll
+		..\..\..\..\Downloads\ARAPI80.NET\icule32.dll = ..\..\..\..\Downloads\ARAPI80.NET\icule32.dll
+		..\..\..\..\Downloads\ARAPI80.NET\icule32d.dll = ..\..\..\..\Downloads\ARAPI80.NET\icule32d.dll
+		..\..\..\..\Downloads\ARAPI80.NET\iculebmc32.dll = ..\..\..\..\Downloads\ARAPI80.NET\iculebmc32.dll
+		..\..\..\..\Downloads\ARAPI80.NET\iculebmc32d.dll = ..\..\..\..\Downloads\ARAPI80.NET\iculebmc32d.dll
+		..\..\..\..\Downloads\ARAPI80.NET\iculx32.dll = ..\..\..\..\Downloads\ARAPI80.NET\iculx32.dll
+		..\..\..\..\Downloads\ARAPI80.NET\iculx32d.dll = ..\..\..\..\Downloads\ARAPI80.NET\iculx32d.dll
+		..\..\..\..\Downloads\ARAPI80.NET\iculxbmc32.dll = ..\..\..\..\Downloads\ARAPI80.NET\iculxbmc32.dll
+		..\..\..\..\Downloads\ARAPI80.NET\iculxbmc32d.dll = ..\..\..\..\Downloads\ARAPI80.NET\iculxbmc32d.dll
+		..\..\..\..\Downloads\ARAPI80.NET\icutest.dll = ..\..\..\..\Downloads\ARAPI80.NET\icutest.dll
+		..\..\..\..\Downloads\ARAPI80.NET\icutestbmc.dll = ..\..\..\..\Downloads\ARAPI80.NET\icutestbmc.dll
+		..\..\..\..\Downloads\ARAPI80.NET\icutestbmcd.dll = ..\..\..\..\Downloads\ARAPI80.NET\icutestbmcd.dll
+		..\..\..\..\Downloads\ARAPI80.NET\icutestd.dll = ..\..\..\..\Downloads\ARAPI80.NET\icutestd.dll
+		..\..\..\..\Downloads\ARAPI80.NET\icutu32.dll = ..\..\..\..\Downloads\ARAPI80.NET\icutu32.dll
+		..\..\..\..\Downloads\ARAPI80.NET\icutu32d.dll = ..\..\..\..\Downloads\ARAPI80.NET\icutu32d.dll
+		..\..\..\..\Downloads\ARAPI80.NET\icutubmc32.dll = ..\..\..\..\Downloads\ARAPI80.NET\icutubmc32.dll
+		..\..\..\..\Downloads\ARAPI80.NET\icutubmc32d.dll = ..\..\..\..\Downloads\ARAPI80.NET\icutubmc32d.dll
+		..\..\..\..\Downloads\ARAPI80.NET\icuuc32.dll = ..\..\..\..\Downloads\ARAPI80.NET\icuuc32.dll
+		..\..\..\..\Downloads\ARAPI80.NET\icuuc32d.dll = ..\..\..\..\Downloads\ARAPI80.NET\icuuc32d.dll
+		..\..\..\..\Downloads\ARAPI80.NET\icuucbmc32.dll = ..\..\..\..\Downloads\ARAPI80.NET\icuucbmc32.dll
+		..\..\..\..\Downloads\ARAPI80.NET\icuucbmc32d.dll = ..\..\..\..\Downloads\ARAPI80.NET\icuucbmc32d.dll
+		..\..\..\..\Downloads\ARAPI80.NET\jlicapi80_build001.dll = ..\..\..\..\Downloads\ARAPI80.NET\jlicapi80_build001.dll
+		..\..\..\..\Downloads\ARAPI80.NET\jlicapi80d_build001.dll = ..\..\..\..\Downloads\ARAPI80.NET\jlicapi80d_build001.dll
+		..\..\..\..\Downloads\ARAPI80.NET\log4net.dll = ..\..\..\..\Downloads\ARAPI80.NET\log4net.dll
+		..\..\..\..\Downloads\ARAPI80.NET\tirpc32.dll = ..\..\..\..\Downloads\ARAPI80.NET\tirpc32.dll
+		..\..\..\..\Downloads\ARAPI80.NET\tirpc40.dll = ..\..\..\..\Downloads\ARAPI80.NET\tirpc40.dll
+		..\..\..\..\Downloads\ARAPI80.NET\vdk200.dll = ..\..\..\..\Downloads\ARAPI80.NET\vdk200.dll
+		..\..\..\..\Downloads\ARAPI80.NET\Xalan-C_1_9.dll = ..\..\..\..\Downloads\ARAPI80.NET\Xalan-C_1_9.dll
+		..\..\..\..\Downloads\ARAPI80.NET\Xalan-C_1_9D.dll = ..\..\..\..\Downloads\ARAPI80.NET\Xalan-C_1_9D.dll
+		..\..\..\..\Downloads\ARAPI80.NET\Xalan-Cbmc_1_9.dll = ..\..\..\..\Downloads\ARAPI80.NET\Xalan-Cbmc_1_9.dll
+		..\..\..\..\Downloads\ARAPI80.NET\Xalan-Cbmc_1_9D.dll = ..\..\..\..\Downloads\ARAPI80.NET\Xalan-Cbmc_1_9D.dll
+		..\..\..\..\Downloads\ARAPI80.NET\XalanMessages_1_9.DLL = ..\..\..\..\Downloads\ARAPI80.NET\XalanMessages_1_9.DLL
+		..\..\..\..\Downloads\ARAPI80.NET\XalanMessages_1_9D.DLL = ..\..\..\..\Downloads\ARAPI80.NET\XalanMessages_1_9D.DLL
+		..\..\..\..\Downloads\ARAPI80.NET\XalanMessagesbmc_1_9.DLL = ..\..\..\..\Downloads\ARAPI80.NET\XalanMessagesbmc_1_9.DLL
+		..\..\..\..\Downloads\ARAPI80.NET\XalanMessagesbmc_1_9D.DLL = ..\..\..\..\Downloads\ARAPI80.NET\XalanMessagesbmc_1_9D.DLL
+		..\..\..\..\Downloads\ARAPI80.NET\xerces-c_2_6.dll = ..\..\..\..\Downloads\ARAPI80.NET\xerces-c_2_6.dll
+		..\..\..\..\Downloads\ARAPI80.NET\xerces-c_2_6D.dll = ..\..\..\..\Downloads\ARAPI80.NET\xerces-c_2_6D.dll
+		..\..\..\..\Downloads\ARAPI80.NET\xerces-cbmc_2_6.dll = ..\..\..\..\Downloads\ARAPI80.NET\xerces-cbmc_2_6.dll
+		..\..\..\..\Downloads\ARAPI80.NET\xerces-cbmc_2_6D.dll = ..\..\..\..\Downloads\ARAPI80.NET\xerces-cbmc_2_6D.dll
+		..\..\..\..\Downloads\ARAPI80.NET\xerces-depdom_2_6.dll = ..\..\..\..\Downloads\ARAPI80.NET\xerces-depdom_2_6.dll
+		..\..\..\..\Downloads\ARAPI80.NET\xerces-depdom_2_6D.dll = ..\..\..\..\Downloads\ARAPI80.NET\xerces-depdom_2_6D.dll
+		..\..\..\..\Downloads\ARAPI80.NET\xerces-depdombmc_2_6.dll = ..\..\..\..\Downloads\ARAPI80.NET\xerces-depdombmc_2_6.dll
+		..\..\..\..\Downloads\ARAPI80.NET\xerces-depdombmc_2_6D.dll = ..\..\..\..\Downloads\ARAPI80.NET\xerces-depdombmc_2_6D.dll
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8B28D028-2CA5-4180-959B-65E3DCEE1DB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B28D028-2CA5-4180-959B-65E3DCEE1DB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B28D028-2CA5-4180-959B-65E3DCEE1DB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B28D028-2CA5-4180-959B-65E3DCEE1DB1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
