@@ -76,7 +76,7 @@ namespace CHSReportGen
                     rep.AddOpenClosedVolume(priority: "High");
                     rep.AddOpenClosedVolume(priority: "Critical");
                     rep.AddSLAMetByDay();
-                    rep.AddOpenClosedVolumeByGroup();
+                    rep.AddOpenClosedVolumeByGroup(weeks: 99);
 
                     AddToLog("-----    SLA Report Complete    -----");
                 }

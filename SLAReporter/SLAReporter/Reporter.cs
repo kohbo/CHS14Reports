@@ -370,7 +370,7 @@ namespace SLAReporter
             int indexc = 0;
 
             SortedDictionary<DateTime, int[]> OpenClosedWeeksDelimiters = new SortedDictionary<DateTime, int[]>();
-            for (DateTime index = (weeks == 99) ? new DateTime(DateTime.Now.Year, 1, 1) : endDate.Date.AddDays(-7 * weeks); index < endDate.Date; index = index.AddDays(7))
+            for (DateTime index = ((weeks == 99) ? new DateTime(DateTime.Now.Year, 1, 1) : endDate.Date.AddDays(-7 * weeks)); index < endDate.Date; index = index.AddDays(7))
             {
                 OpenClosedWeeksDelimiters.Add(index, PopulateArray(new int[12], 0));
             }
@@ -436,15 +436,15 @@ namespace SLAReporter
                 }
 
                 OpenClosedWeeksDelimiters = new SortedDictionary<DateTime, int[]>();
-                for (DateTime index = endDate.Date.AddDays(-7*weeks); index < endDate.Date; index = index.AddDays(7))
+                for (DateTime index = ((weeks == 99) ? new DateTime(DateTime.Now.Year, 1, 1) : endDate.Date.AddDays(-7 * weeks)); index < endDate.Date; index = index.AddDays(7))
                 {
                     OpenClosedWeeksDelimiters.Add(index, PopulateArray(new int[12], 0));
                 }
 
-                AddChart(oWS, 10, 10 + (0 + indexc * 900), 600, 400, group + ' ' + "Critical", oWS.Range[oWS.Cells[3, col - 12], oWS.Cells[11, col - 10]]);
-                AddChart(oWS, 650, 10 + (0 + indexc * 900), 600, 400, group + ' ' + "High", oWS.Range[oWS.Cells[3, col - 9], oWS.Cells[11, col - 7]]);
-                AddChart(oWS, 10, 10 + (450 + indexc * 900), 600, 400, group + ' ' + "Medium", oWS.Range[oWS.Cells[3, col - 9], oWS.Cells[11, col - 7]]);
-                AddChart(oWS, 650, 10 + (450 + indexc * 900), 600, 400, group + ' ' + "Low", oWS.Range[oWS.Cells[3, col - 9], oWS.Cells[11, col - 7]]);
+                AddChart(oWS, 10, 10 + (0 + indexc * 900), 600, 400, group + ' ' + "Critical", oWS.Range[oWS.Cells[3, col - 12], oWS.Cells[3 + OpenClosedWeeksDelimiters.Count, col - 10]]);
+                AddChart(oWS, 650, 10 + (0 + indexc * 900), 600, 400, group + ' ' + "High", oWS.Range[oWS.Cells[3, col - 9], oWS.Cells[3 + OpenClosedWeeksDelimiters.Count, col - 7]]);
+                AddChart(oWS, 10, 10 + (450 + indexc * 900), 600, 400, group + ' ' + "Medium", oWS.Range[oWS.Cells[3, col - 6], oWS.Cells[3 + OpenClosedWeeksDelimiters.Count, col - 4]]);
+                AddChart(oWS, 650, 10 + (450 + indexc * 900), 600, 400, group + ' ' + "Low", oWS.Range[oWS.Cells[3, col - 3], oWS.Cells[3 + OpenClosedWeeksDelimiters.Count, col - 1]]);
 
                 indexc++;
             }
@@ -574,7 +574,7 @@ namespace SLAReporter
             oChart.SetSourceData(src);
             Excel.Axis cAxis = oChart.Axes(Excel.XlAxisType.xlCategory, Excel.XlAxisGroup.xlPrimary);
             cAxis.CategoryType = Excel.XlCategoryType.xlCategoryScale;
-            cAxis.CategoryNames = oWS.Range["A4", "A11"];
+            cAxis.CategoryNames = oWS.Range["A4", "A56"];
             Excel.Series oSC = oChart.SeriesCollection("Open");
             oSC.ChartType = Excel.XlChartType.xlLine;
             oSC.Format.Line.ForeColor.RGB = (int)Excel.XlRgbColor.rgbBlack;
