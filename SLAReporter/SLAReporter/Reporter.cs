@@ -441,58 +441,10 @@ namespace SLAReporter
                     OpenClosedWeeksDelimiters.Add(index, PopulateArray(new int[12], 0));
                 }
 
-                Excel.ChartObjects oChartObjs = oWS.ChartObjects();
-                Excel.Chart oChart = oChartObjs.Add(10, 10 + (0 + indexc * 900), 600, 400).Chart;
-                oChart.HasTitle = true;
-                oChart.ChartTitle.Text = group + ' ' + "Critical";
-                oChart.ChartType = Excel.XlChartType.xlColumnClustered;
-                Excel.Axis cAxis = oChart.Axes(Excel.XlAxisType.xlCategory, Excel.XlAxisGroup.xlPrimary);
-                cAxis.CategoryType = Excel.XlCategoryType.xlCategoryScale;
-                oChart.SetSourceData(oWS.Range[oWS.Cells[3, col-12], oWS.Cells[11, col-10]]);
-                Excel.Series oSC = oChart.SeriesCollection("Open");
-                oSC.ChartType = Excel.XlChartType.xlLine;
-                oSC.Format.Line.ForeColor.RGB = (int)Excel.XlRgbColor.rgbBlack;
-                oChart.HasAxis[Excel.XlAxisType.xlValue, Excel.XlAxisGroup.xlSecondary] = true;
-                oSC.AxisGroup = Excel.XlAxisGroup.xlSecondary;
-
-                oChart = oChartObjs.Add(650, 10 + (0 + indexc * 900), 600, 400).Chart;
-                oChart.HasTitle = true;
-                oChart.ChartTitle.Text = group + ' ' + "High";
-                oChart.ChartType = Excel.XlChartType.xlColumnClustered;
-                cAxis = oChart.Axes(Excel.XlAxisType.xlCategory, Excel.XlAxisGroup.xlPrimary);
-                cAxis.CategoryType = Excel.XlCategoryType.xlCategoryScale;
-                oChart.SetSourceData(oWS.Range[oWS.Cells[3, col - 9], oWS.Cells[11, col - 7]]);
-                oSC = oChart.SeriesCollection("Open");
-                oSC.ChartType = Excel.XlChartType.xlLine;
-                oSC.Format.Line.ForeColor.RGB = (int)Excel.XlRgbColor.rgbBlack;
-                oChart.HasAxis[Excel.XlAxisType.xlValue, Excel.XlAxisGroup.xlSecondary] = true;
-                oSC.AxisGroup = Excel.XlAxisGroup.xlSecondary;
-
-                oChart = oChartObjs.Add(10, 10 + (450 + indexc * 900), 600, 400).Chart;
-                oChart.HasTitle = true;
-                oChart.ChartTitle.Text = group + ' ' + "Medium";
-                oChart.ChartType = Excel.XlChartType.xlColumnClustered;
-                cAxis = oChart.Axes(Excel.XlAxisType.xlCategory, Excel.XlAxisGroup.xlPrimary);
-                cAxis.CategoryType = Excel.XlCategoryType.xlCategoryScale;
-                oChart.SetSourceData(oWS.Range[oWS.Cells[3, col - 6], oWS.Cells[11, col - 4]]);
-                oSC = oChart.SeriesCollection("Open");
-                oSC.ChartType = Excel.XlChartType.xlLine;
-                oSC.Format.Line.ForeColor.RGB = (int)Excel.XlRgbColor.rgbBlack;
-                oChart.HasAxis[Excel.XlAxisType.xlValue, Excel.XlAxisGroup.xlSecondary] = true;
-                oSC.AxisGroup = Excel.XlAxisGroup.xlSecondary;
-
-                oChart = oChartObjs.Add(650, 10 + (450 + indexc * 900), 600, 400).Chart;
-                oChart.HasTitle = true;
-                oChart.ChartTitle.Text = group + ' ' + "Low";
-                oChart.ChartType = Excel.XlChartType.xlColumnClustered;
-                cAxis = oChart.Axes(Excel.XlAxisType.xlCategory, Excel.XlAxisGroup.xlPrimary);
-                cAxis.CategoryType = Excel.XlCategoryType.xlCategoryScale;
-                oChart.SetSourceData(oWS.Range[oWS.Cells[3, col - 3], oWS.Cells[11, col - 1]]);
-                oSC = oChart.SeriesCollection("Open");
-                oSC.ChartType = Excel.XlChartType.xlLine;
-                oSC.Format.Line.ForeColor.RGB = (int)Excel.XlRgbColor.rgbBlack;
-                oChart.HasAxis[Excel.XlAxisType.xlValue, Excel.XlAxisGroup.xlSecondary] = true;
-                oSC.AxisGroup = Excel.XlAxisGroup.xlSecondary;
+                AddChart(oWS, 10, 10 + (0 + indexc * 900), 600, 400, group + ' ' + "Critical", oWS.Range[oWS.Cells[3, col - 12], oWS.Cells[11, col - 10]]);
+                AddChart(oWS, 650, 10 + (0 + indexc * 900), 600, 400, group + ' ' + "High", oWS.Range[oWS.Cells[3, col - 9], oWS.Cells[11, col - 7]]);
+                AddChart(oWS, 10, 10 + (450 + indexc * 900), 600, 400, group + ' ' + "Medium", oWS.Range[oWS.Cells[3, col - 9], oWS.Cells[11, col - 7]]);
+                AddChart(oWS, 650, 10 + (450 + indexc * 900), 600, 400, group + ' ' + "Low", oWS.Range[oWS.Cells[3, col - 9], oWS.Cells[11, col - 7]]);
 
                 indexc++;
             }
@@ -611,6 +563,23 @@ namespace SLAReporter
             }
 
             return true;
+        }
+
+        private void AddChart(Excel.Worksheet oWS, double left, double top, double width, double height, string title, Excel.Range src)
+        {
+            Excel.ChartObjects oChartObjs = oWS.ChartObjects();
+            Excel.Chart oChart = oChartObjs.Add(left, top, width, height).Chart;
+            oChart.HasTitle = true;
+            oChart.ChartTitle.Text = title;
+            oChart.SetSourceData(src);
+            Excel.Axis cAxis = oChart.Axes(Excel.XlAxisType.xlCategory, Excel.XlAxisGroup.xlPrimary);
+            cAxis.CategoryType = Excel.XlCategoryType.xlCategoryScale;
+            cAxis.CategoryNames = oWS.Range["A4", "A11"];
+            Excel.Series oSC = oChart.SeriesCollection("Open");
+            oSC.ChartType = Excel.XlChartType.xlLine;
+            oSC.Format.Line.ForeColor.RGB = (int)Excel.XlRgbColor.rgbBlack;
+            oChart.HasAxis[Excel.XlAxisType.xlValue, Excel.XlAxisGroup.xlSecondary] = true;
+            oSC.AxisGroup = Excel.XlAxisGroup.xlSecondary;
         }
     }
 }
