@@ -370,7 +370,7 @@ namespace SLAReporter
             int indexc = 0;
 
             SortedDictionary<DateTime, int[]> OpenClosedWeeksDelimiters = new SortedDictionary<DateTime, int[]>();
-            for (DateTime index = endDate.Date.AddDays(-7 * weeks); index < endDate.Date; index = index.AddDays(7))
+            for (DateTime index = (weeks == 99) ? new DateTime(DateTime.Now.Year, 1, 1) : endDate.Date.AddDays(-7 * weeks); index < endDate.Date; index = index.AddDays(7))
             {
                 OpenClosedWeeksDelimiters.Add(index, PopulateArray(new int[12], 0));
             }
